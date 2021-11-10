@@ -28,9 +28,9 @@ python -m onnxsim yolov5s.onnx yolov5s-sim.onnx
 > b.  一共删除了10层，第二行的173更改为164，计算方法173-(10-1)=164  
 > ![count](images/count.png)   
 > c. 增加自定义层  
-> ```bash
+```bash
 YoloV5Focus              focus                    1 1  images 159
-> ```  
+```  
 > 159来自下图，找到删除的第13行  
 > ![159](images/159.png)  
 > Foucs更改之后的结果是  
@@ -39,9 +39,9 @@ YoloV5Focus              focus                    1 1  images 159
 > 将reshape中的960，240，60更改为-1，或者其他 0=后面的数  
 > ![reshape](images/reshape.png)  
 > 5. ncnn optimize优化  
-> ```bash
+```bash
 ./ncnnoptimize yolov5s.param yolov5s.bin yolov5s-opt.param yolov5s-opt.bin 1
->```
+```
 >6. C++代码处理  
 >1). 三个extract  
 >ncnn-20210507/examples目录下的yolov5.cpp,我们仿照代码中output,781,801 进行更改 .代码举例  
@@ -62,14 +62,14 @@ YoloV5Focus              focus                    1 1  images 159
 > 加载模型更改为自己的模型yolov5s-opt.param 和yolov5s-opt.bin  
 > ![load](images/load.png)  
 > 编译： 
-> ```bash
+```bash
  ncnn-20210507/build$ make install
 ```
 > ![build](images/build.png)  
 > 编译运行：  
-> ```bash
+```bash
  ncnn-20210507/build/examples$ ./yolov5 1.jpg
-> ```
+```
 
 ### 安卓工程项目集成  
 >### step1
