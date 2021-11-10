@@ -1,5 +1,5 @@
-##安卓广告跳过 yolov5 ncnn方式集成 
-
+安卓广告跳过 yolov5 ncnn方式集成 
+----
 代码原地址： https://github.com/nihui/ncnn-android-yolov5  
 我在这里只是替换了模型信息，其余的内容基本没有修改。  
 原工程并没有写如何进行模型转换，模型转换可以参考这篇文章：https://blog.csdn.net/flyfish1986/article/details/116604907里面写的比较详细了。   
@@ -83,6 +83,7 @@ YoloV5Focus              focus                    1 1  images 159
 >### step3
 >open this project with Android Studio, build it and enjoy!  
 
+  
 
 参考链接：  
 https://github.com/cmdbug/YOLOv5_NCNN.git  
