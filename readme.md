@@ -28,7 +28,7 @@ python -m onnxsim yolov5s.onnx yolov5s-sim.onnx
 > b.  一共删除了10层，第二行的173更改为164，计算方法173-(10-1)=164  
 > ![count](images/count.png)   
 > c. 增加自定义层  
-> ```yaml
+> ```bash
 YoloV5Focus              focus                    1 1  images 159
 > ```  
 > 159来自下图，找到删除的第13行  
